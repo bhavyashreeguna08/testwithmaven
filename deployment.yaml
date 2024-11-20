@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: testwithmaven-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: testwithmaven
+  template:
+    metadata:
+      labels:
+        app: testwithmaven
+    spec:
+      containers:
+      - name: testwithmaven
+        image: bhavya762/testwithmaven:latest
+        ports:
+        - containerPort: 8080
