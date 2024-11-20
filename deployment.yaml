@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: testwithmaven-deployment
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: testwithmaven
@@ -16,4 +16,4 @@ spec:
       - name: testwithmaven
         image: bhavya762/testwithmaven:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 8080  # Change this to the appropriate port your app uses

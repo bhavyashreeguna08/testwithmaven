@@ -3,11 +3,9 @@ kind: Service
 metadata:
   name: testwithmaven-service
 spec:
-  type: NodePort
   selector:
     app: testwithmaven
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8080
-      nodePort: 30007 # Optional
+      port: 8080  # This should match the containerPort you defined in the deployment.yaml
+  type: LoadBalancer
