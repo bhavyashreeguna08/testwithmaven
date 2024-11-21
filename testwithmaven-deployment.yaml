@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: testwithmaven
-          image: deepika135/testwithmaven:latest
+          image: bhavya762/testwithmaven:latest
           ports:
             - containerPort: 8080
