@@ -1,7 +1,8 @@
 FROM openjdk:17-jdk-slim
 
-COPY target/testwithmaven-1.0.jar /app/testwithmaven-1.0.jar
+WORKDIR /testwithmaven
 
-WORKDIR /app
+COPY target/testwithmaven-1.0.jar testwithmaven-1.0.jar
 
-CMD ["java", "-jar", "testwithmaven-1.0.jar"]
+
+ENTRYPOINT ["java", "-jar", "testwithmaven-1.0.jar"]

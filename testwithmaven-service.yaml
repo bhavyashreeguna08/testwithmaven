@@ -7,5 +7,6 @@ spec:
     app: testwithmaven
   ports:
     - protocol: TCP
-      port: 8080  # This should match the containerPort you defined in the deployment.yaml
+      port: 80 
+      targetPort: 8080   
   type: NodePort

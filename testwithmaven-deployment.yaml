@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: testwithmaven-deployment
 spec:
-  replicas: 1
+  replicas: 1  # Number of replicas (Pods) to run
   selector:
     matchLabels:
       app: testwithmaven
@@ -13,7 +13,7 @@ spec:
         app: testwithmaven
     spec:
       containers:
-      - name: testwithmaven
-        image: bhavya762/testwithmaven:latest
-        ports:
-        - containerPort: 8080
+        - name: testwithmaven
+          image: deepika135/testwithmaven:latest
+          ports:
+            - containerPort: 8080
